@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dabur Nutri Mix - Premium Ayurvedic dry fruits nutrition available in 3 convenient formats. Rich in Protein, 100% Natural, Traditional Ayurvedic Recipe.">
+    <meta name="keywords" content="Dabur, Nutri Mix, dry fruits powder, Ayurvedic nutrition, natural health supplement, protein powder">
+    <title>Dabur Nutri Mix - Premium Ayurvedic Dry Fruits Nutrition</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-brand">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Dabur_logo.svg/512px-Dabur_logo.svg.png" alt="Dabur Logo" class="brand-logo">
+                <div class="brand-text">
+                    <span class="brand-nutrimix">NUTRI MIX</span>
+                    <span class="brand-tagline">Ayurvedic Nutrition</span>
+                </div>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#products" class="nav-link">Products</a></li>
+                <li><a href="#benefits" class="nav-link">Benefits</a></li>
+                <li><a href="#recipes" class="nav-link">Recipes</a></li>
+                <li><a href="#buy" class="nav-link">Buy Now</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">🏆 India's Trusted Ayurvedic Brand Since 1884</div>
+                <h1 class="hero-title">
+                    <span class="title-line1">Dabur Nutri Mix</span>
+                    <span class="title-line2">Ayurvedic Nutrition Excellence</span>
+                </h1>
+                <p class="hero-description">
+                    Experience the perfect blend of tradition and nutrition with Dabur's premium dry fruits blend. 
+                    100% natural, rich in protein, and crafted using time-tested Ayurvedic recipes for complete family wellness.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">12g</span>
+                        <span class="stat-label">Protein per Serving</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">0</span>
+                        <span class="stat-label">Preservatives Added</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">135+</span>
+                        <span class="stat-label">Years of Trust</span>
+                    </div>
+                </div>
+                <div class="hero-actions">
+                    <button class="btn-primary" onclick="scrollToProducts()">
+                        Explore Products
+                    </button>
+                    <button class="btn-secondary" onclick="scrollToBuy()">
+                        Buy Now
+                    </button>
+                </div>
+            </div>
+            
+            <div class="hero-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-track" id="carouselTrack">
+                        <!-- Slide 1 - Jar (300g Family Pack) -->
+                        <div class="carousel-slide active">
+                            <div class="product-showcase">
+                                <div class="product-image">
+                                    <div class="product-visual-container">
+                                        <img src="product-jar.jpg" alt="Dabur Nutri Mix Traditional Recipe Jar 300g" class="product-image-main">
+                                        <div class="product-glow"></div>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Traditional Recipe Jar</h3>
+                                    <p>Premium Ayurvedic Dry Fruits Powder in convenient 300g family pack</p>
+                                    <span class="product-badge-hero popular">Most Popular</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 2 - Box (200g Premium) -->
+                        <div class="carousel-slide">
+                            <div class="product-showcase">
+                                <div class="product-image">
+                                    <div class="product-visual-container">
+                                        <img src="product-box.jpg" alt="Dabur Nutri Mix Premium Dry Fruits & Seeds 200g" class="product-image-main">
+                                        <div class="product-glow"></div>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Premium Dry Fruits & Seeds</h3>
+                                    <p>Perfect blend for mixing with milk or smoothies - 200g convenient pack</p>
+                                    <span class="product-badge-hero">Natural & Pure</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 3 - Pouch (150g Wellness) -->
+                        <div class="carousel-slide">
+                            <div class="product-showcase">
+                                <div class="product-image">
+                                    <div class="product-visual-container">
+                                        <img src="product-pouch.jpg" alt="Dabur Nutri Mix 100% Natural Wellness Blend 150g" class="product-image-main">
+                                        <div class="product-glow"></div>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>100% Natural Dry Fruits</h3>
+                                    <p>Ayurvedic wellness blend in handy 150g pouch format</p>
+                                    <span class="product-badge-hero">Special Price ₹199</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-dots">
+                        <button class="dot active" onclick="goToSlide(0)"></button>
+                        <button class="dot" onclick="goToSlide(1)"></button>
+                        <button class="dot" onclick="goToSlide(2)"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Three Formats, Complete Nutrition</h2>
+                <p>Choose the perfect Dabur Nutri Mix format that fits your lifestyle and nutritional needs</p>
+            </div>
+            
+            <div class="products-grid">
+                <!-- Traditional Recipe Jar -->
+                <div class="product-card featured" data-product="jar">
+                    <div class="product-card-header">
+                        <div class="product-badge popular">Family Favorite</div>
+                        <div class="product-visual-container">
+                            <img src="product-jar.jpg" alt="Dabur Nutri Mix Traditional Recipe Jar 300g" class="product-image-card">
+                            <div class="product-highlight"></div>
+                        </div>
+                    </div>
+                    <div class="product-card-content">
+                        <h3>Traditional Recipe Jar</h3>
+                        <p class="product-subtitle">Premium Ayurvedic Dry Fruits Powder - 300g Family Pack</p>
+                        
+                        <div class="product-features">
+                            <div class="feature">✓ Time-tested Traditional Ayurvedic Recipe</div>
+                            <div class="feature">✓ Perfect for spreading on bread & rotis</div>
+                            <div class="feature">✓ Rich in natural proteins and healthy fats</div>
+                            <div class="feature">✓ 100% Natural with no preservatives</div>
+                        </div>
+                        
+                        <div class="product-usage">
+                            <strong>Best for:</strong> Family meals, breakfast spreads, traditional recipes
+                        </div>
+                        
+                        <button class="btn-product" onclick="showProductDetails('jar')">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Premium Box -->
+                <div class="product-card" data-product="box">
+                    <div class="product-card-header">
+                        <div class="product-badge">Natural & Pure</div>
+                        <div class="product-visual-container">
+                            <img src="product-box.jpg" alt="Dabur Nutri Mix Premium Dry Fruits & Seeds 200g" class="product-image-card">
+                            <div class="product-highlight"></div>
+                        </div>
+                    </div>
+                    <div class="product-card-content">
+                        <h3>Premium Dry Fruits & Seeds</h3>
+                        <p class="product-subtitle">Perfect for Milk & Smoothies - 200g Pack</p>
+                        
+                        <div class="product-features">
+                            <div class="feature">✓ Instant mixing formula</div>
+                            <div class="feature">✓ 12g protein per serving</div>
+                            <div class="feature">✓ Rich in essential vitamins & minerals</div>
+                            <div class="feature">✓ Ideal for active lifestyles</div>
+                        </div>
+                        
+                        <div class="product-usage">
+                            <strong>Best for:</strong> Protein drinks, smoothies, health shakes
+                        </div>
+                        
+                        <button class="btn-product" onclick="showProductDetails('box')">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Wellness Pouch -->
+                <div class="product-card" data-product="pouch">
+                    <div class="product-card-header">
+                        <div class="product-badge">Ayurvedic Wellness</div>
+                        <div class="product-visual-container">
+                            <img src="product-pouch.jpg" alt="Dabur Nutri Mix 100% Natural Wellness Blend 150g" class="product-image-card">
+                            <div class="product-highlight"></div>
+                        </div>
+                    </div>
+                    <div class="product-card-content">
+                        <h3>100% Natural Dry Fruits Blend</h3>
+                        <p class="product-subtitle">Ayurvedic Wellness Formula - 150g Pouch</p>
+                        
+                        <div class="product-features">
+                            <div class="feature">✓ 100% Natural dry fruits blend</div>
+                            <div class="feature">✓ Ayurvedic wellness benefits</div>
+                            <div class="feature">✓ Convenient travel-friendly pouch</div>
+                            <div class="feature">✓ Special introductory price</div>
+                        </div>
+                        
+                        <div class="product-usage">
+                            <strong>Best for:</strong> Daily wellness, travel nutrition, convenient storage
+                        </div>
+                        
+                        <button class="btn-product" onclick="showProductDetails('pouch')">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nutrition Calculator -->
+            <div class="nutrition-calculator">
+                <h3>🧮 Personalized Nutrition Calculator</h3>
+                <p>Calculate your daily Nutri Mix requirement based on your needs</p>
+                
+                <form class="calculator-form">
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <select id="age">
+                            <option value="">Select Age</option>
+                            <option value="child">3-12 years</option>
+                            <option value="teen">13-18 years</option>
+                            <option value="adult">19-50 years</option>
+                            <option value="senior">50+ years</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="activity">Activity Level</label>
+                        <select id="activity">
+                            <option value="">Select Activity</option>
+                            <option value="low">Low (Sedentary)</option>
+                            <option value="moderate">Moderate (Active)</option>
+                            <option value="high">High (Very Active)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="goal">Health Goal</label>
+                        <select id="goal">
+                            <option value="">Select Goal</option>
+                            <option value="immunity">Boost Immunity</option>
+                            <option value="energy">Increase Energy</option>
+                            <option value="weight">Healthy Weight Gain</option>
+                            <option value="general">General Wellness</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn-primary" onclick="calculateNutrition()">Calculate</button>
+                </form>
+                
+                <div class="calculator-result hidden" id="calculatorResult">
+                    <h4>Your Personalized Recommendation</h4>
+                    <div class="nutrition-recommendations" id="nutritionRecommendations">
+                        <!-- Results will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2>Ayurvedic Nutrition Benefits</h2>
+                <p>Discover the comprehensive health benefits of Dabur Nutri Mix's time-tested Ayurvedic formula</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card" onclick="toggleBenefit(this)">
+                    <span class="benefit-icon">🧠</span>
+                    <h3>Brain Health & Memory</h3>
+                    <p>Rich in omega-3 from walnuts and almonds that support cognitive function and memory enhancement</p>
+                    <div class="benefit-detail hidden">
+                        <strong>Key Ingredients:</strong> Walnuts provide DHA and EPA omega-3 fatty acids essential for brain development and function. Almonds contribute vitamin E which protects brain cells from oxidative stress.
+                    </div>
+                    <button class="benefit-toggle">Learn More</button>
+                </div>
+
+                <div class="benefit-card" onclick="toggleBenefit(this)">
+                    <span class="benefit-icon">💪</span>
+                    <h3>Muscle Strength & Protein</h3>
+                    <p>Complete protein profile with all essential amino acids for muscle building and repair</p>
+                    <div class="benefit-detail hidden">
+                        <strong>Protein Content:</strong> Each serving provides 12g of high-quality protein from mixed nuts and seeds, supporting muscle maintenance and growth across all age groups.
+                    </div>
+                    <button class="benefit-toggle">Learn More</button>
+                </div>
+
+                <div class="benefit-card" onclick="toggleBenefit(this)">
+                    <span class="benefit-icon">🛡️</span>
+                    <h3>Natural Immunity Boost</h3>
+                    <p>Antioxidants from dates and nuts strengthen your immune system naturally</p>
+                    <div class="benefit-detail hidden">
+                        <strong>Immune Support:</strong> Rich in vitamin C, vitamin E, zinc, and selenium from various nuts and dried fruits that work synergistically to enhance immune function.
+                    </div>
+                    <button class="benefit-toggle">Learn More</button>
+                </div>
+
+                <div class="benefit-card" onclick="toggleBenefit(this)">
+                    <span class="benefit-icon">❤️</span>
+                    <h3>Heart Health Support</h3>
+                    <p>Healthy monounsaturated fats help maintain cardiovascular wellness</p>
+                    <div class="benefit-detail hidden">
+                        <strong>Heart Benefits:</strong> Contains heart-healthy fats that help reduce bad cholesterol levels and support overall cardiovascular health when part of a balanced diet.
+                    </div>
+                    <button class="benefit-toggle">Learn More</button>
+                </div>
+
+                <div class="benefit-card" onclick="toggleBenefit(this)">
+                    <span class="benefit-icon">🌱</span>
+                    <h3>Digestive Health</h3>
+                    <p>Natural fiber promotes healthy digestion and gut wellness</p>
+                    <div class="benefit-detail hidden">
+                        <strong>Digestive Support:</strong> High fiber content aids in healthy digestion, promotes regularity, and supports beneficial gut bacteria growth.
+                    </div>
+                    <button class="benefit-toggle">Learn More</button>
+                </div>
+
+                <div class="benefit-card" onclick="toggleBenefit(this)">
+                    <span class="benefit-icon">⚡</span>
+                    <h3>Natural Energy & Vitality</h3>
+                    <p>Essential minerals like iron, magnesium, and potassium for sustained energy</p>
+                    <div class="benefit-detail hidden">
+                        <strong>Energy Minerals:</strong> Iron supports oxygen transport, magnesium aids in energy metabolism, and potassium helps maintain proper muscle and nerve function.
+                    </div>
+                    <button class="benefit-toggle">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recipes Section -->
+    <section id="recipes" class="recipes">
+        <div class="container">
+            <div class="section-header">
+                <h2>Delicious Nutri Mix Recipes</h2>
+                <p>Transform your nutrition with these amazing Ayurvedic recipes using Dabur Nutri Mix</p>
+            </div>
+
+            <div class="recipe-filters">
+                <button class="filter-btn active" onclick="filterRecipes('all')">All Recipes</button>
+                <button class="filter-btn" onclick="filterRecipes('breakfast')">Breakfast</button>
+                <button class="filter-btn" onclick="filterRecipes('snacks')">Snacks</button>
+                <button class="filter-btn" onclick="filterRecipes('drinks')">Drinks</button>
+                <button class="filter-btn" onclick="filterRecipes('desserts')">Desserts</button>
+            </div>
+
+            <div class="recipe-category" data-category="breakfast">
+                <h3>🌅 Healthy Breakfast Options</h3>
+                <div class="recipes-grid">
+                    <div class="recipe-card">
+                        <div class="recipe-image">
+                            <div class="recipe-placeholder">
+                                <span class="recipe-icon">🥞</span>
+                                <p>Nutri Mix Pancakes</p>
+                            </div>
+                            <div class="recipe-time">⏱️ 15 mins</div>
+                            <div class="recipe-difficulty easy">Easy</div>
+                        </div>
+                        <div class="recipe-content">
+                            <h4>Ayurvedic Protein Pancakes</h4>
+                            <p>Fluffy pancakes enriched with Dabur Nutri Mix powder for a nutritious breakfast boost</p>
+                            <a href="#" class="recipe-link">📺 Watch Recipe Video</a>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card">
+                        <div class="recipe-image">
+                            <div class="recipe-placeholder">
+                                <span class="recipe-icon">🥣</span>
+                                <p>Overnight Oats</p>
+                            </div>
+                            <div class="recipe-time">⏱️ 5 mins prep</div>
+                            <div class="recipe-difficulty easy">Easy</div>
+                        </div>
+                        <div class="recipe-content">
+                            <h4>Nutri Mix Overnight Oats</h4>
+                            <p>Make-ahead breakfast oats with the goodness of Ayurvedic dry fruits</p>
+                            <a href="#" class="recipe-link">📺 Watch Recipe Video</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recipe-category" data-category="drinks">
+                <h3>🥤 Nutritious Drinks</h3>
+                <div class="recipes-grid">
+                    <div class="recipe-card">
+                        <div class="recipe-image">
+                            <div class="recipe-placeholder">
+                                <span class="recipe-icon">🥛</span>
+                                <p>Power Smoothie</p>
+                            </div>
+                            <div class="recipe-time">⏱️ 5 mins</div>
+                            <div class="recipe-difficulty easy">Easy</div>
+                        </div>
+                        <div class="recipe-content">
+                            <h4>Ayurvedic Power Smoothie</h4>
+                            <p>Thick smoothie bowl topped with Nutri Mix for complete nutrition</p>
+                            <a href="#" class="recipe-link">📺 Watch Recipe Video</a>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card">
+                        <div class="recipe-image">
+                            <div class="recipe-placeholder">
+                                <span class="recipe-icon">🍯</span>
+                                <p>Golden Milk</p>
+                            </div>
+                            <div class="recipe-time">⏱️ 10 mins</div>
+                            <div class="recipe-difficulty easy">Easy</div>
+                        </div>
+                        <div class="recipe-content">
+                            <h4>Nutri Mix Golden Milk</h4>
+                            <p>Traditional Ayurvedic golden milk enhanced with dry fruits nutrition</p>
+                            <a href="#" class="recipe-link">📺 Watch Recipe Video</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recipe-category" data-category="snacks">
+                <h3>🍪 Healthy Snacks</h3>
+                <div class="recipes-grid">
+                    <div class="recipe-card">
+                        <div class="recipe-image">
+                            <div class="recipe-placeholder">
+                                <span class="recipe-icon">⚡</span>
+                                <p>Energy Balls</p>
+                            </div>
+                            <div class="recipe-time">⏱️ 20 mins</div>
+                            <div class="recipe-difficulty easy">Easy</div>
+                        </div>
+                        <div class="recipe-content">
+                            <h4>No-Bake Energy Balls</h4>
+                            <p>Quick energy snacks made with Nutri Mix and natural sweeteners</p>
+                            <a href="#" class="recipe-link">📺 Watch Recipe Video</a>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card">
+                        <div class="recipe-image">
+                            <div class="recipe-placeholder">
+                                <span class="recipe-icon">🍪</span>
+                                <p>Healthy Cookies</p>
+                            </div>
+                            <div class="recipe-time">⏱️ 25 mins</div>
+                            <div class="recipe-difficulty medium">Medium</div>
+                        </div>
+                        <div class="recipe-content">
+                            <h4>Ayurvedic Nutrition Cookies</h4>
+                            <p>Guilt-free cookies packed with the goodness of traditional dry fruits</p>
+                            <a href="#" class="recipe-link">📺 Watch Recipe Video</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recipe-category" data-category="desserts">
+                <h3>🍯 Traditional Desserts</h3>
+                <div class="recipes-grid">
+                    <div class="recipe-card">
+                        <div class="recipe-image">
+                            <div class="recipe-placeholder">
+                                <span class="recipe-icon">🍮</span>
+                                <p>Ayurvedic Halwa</p>
+                            </div>
+                            <div class="recipe-time">⏱️ 30 mins</div>
+                            <div class="recipe-difficulty medium">Medium</div>
+                        </div>
+                        <div class="recipe-content">
+                            <h4>Traditional Nutri Mix Halwa</h4>
+                            <p>Rich and creamy halwa made with premium Ayurvedic dry fruits blend</p>
+                            <a href="#" class="recipe-link">📺 Watch Recipe Video</a>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card">
+                        <div class="recipe-image">
+                            <div class="recipe-placeholder">
+                                <span class="recipe-icon">🟫</span>
+                                <p>Healthy Ladoo</p>
+                            </div>
+                            <div class="recipe-time">⏱️ 20 mins</div>
+                            <div class="recipe-difficulty easy">Easy</div>
+                        </div>
+                        <div class="recipe-content">
+                            <h4>Ayurvedic Energy Ladoos</h4>
+                            <p>Traditional sweet made nutritious with Dabur Nutri Mix goodness</p>
+                            <a href="#" class="recipe-link">📺 Watch Recipe Video</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buy Section -->
+    <section id="buy" class="buy-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Buy Dabur Nutri Mix</h2>
+                <p>Available across all major platforms for your convenience</p>
+            </div>
+
+            <div class="buy-options">
+                <!-- Quick Delivery -->
+                <div class="platform-category">
+                    <h3>⚡ Quick Delivery (10-30 minutes)</h3>
+                    <div class="platform-grid">
+                        <a href="#" class="platform-card quick-commerce" onclick="fallbackToBlinkit()">
+                            <span class="platform-icon">🛒</span>
+                            <div class="platform-info">
+                                <h4>Blinkit</h4>
+                                <p>10-15 minutes delivery</p>
+                            </div>
+                            <div class="platform-badge">Quick</div>
+                        </a>
+
+                        <a href="#" class="platform-card quick-commerce" onclick="fallbackToZepto()">
+                            <span class="platform-icon">⚡</span>
+                            <div class="platform-info">
+                                <h4>Zepto</h4>
+                                <p>10 minutes delivery</p>
+                            </div>
+                            <div class="platform-badge">Fastest</div>
+                        </a>
+
+                        <a href="#" class="platform-card quick-commerce" onclick="fallbackToInstamart()">
+                            <span class="platform-icon">🍽️</span>
+                            <div class="platform-info">
+                                <h4>Swiggy Instamart</h4>
+                                <p>15-30 minutes delivery</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- E-commerce -->
+                <div class="platform-category">
+                    <h3>🛍️ E-commerce Platforms</h3>
+                    <div class="platform-grid">
+                        <a href="#" class="platform-card ecommerce" onclick="fallbackToBigBasket()">
+                            <span class="platform-icon">🥕</span>
+                            <div class="platform-info">
+                                <h4>BigBasket</h4>
+                                <p>Same day & next day delivery</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="platform-card ecommerce">
+                            <span class="platform-icon">📦</span>
+                            <div class="platform-info">
+                                <h4>Amazon</h4>
+                                <p>Prime delivery available</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="platform-card ecommerce">
+                            <span class="platform-icon">🛒</span>
+                            <div class="platform-info">
+                                <h4>Flipkart</h4>
+                                <p>Express delivery options</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Pharmacies -->
+                <div class="platform-category">
+                    <h3>🏥 Top Pharmacies & Health Stores</h3>
+                    <div class="platform-grid">
+                        <a href="#" class="platform-card pharmacy">
+                            <span class="platform-icon">💊</span>
+                            <div class="platform-info">
+                                <h4>Apollo Pharmacy</h4>
+                                <p>Trusted health partner</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="platform-card pharmacy">
+                            <span class="platform-icon">🏥</span>
+                            <div class="platform-info">
+                                <h4>MedPlus</h4>
+                                <p>Health & wellness stores</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="platform-card pharmacy">
+                            <span class="platform-icon">⚕️</span>
+                            <div class="platform-info">
+                                <h4>1mg</h4>
+                                <p>Online health platform</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Availability Checker -->
+            <div class="availability-checker">
+                <h3>📍 Check Availability in Your Area</h3>
+                <div class="checker-form">
+                    <input type="text" id="pincodeInput" placeholder="Enter your pincode">
+                    <button class="btn-primary" onclick="checkAvailability()">Check Availability</button>
+                </div>
+                <div class="availability-result hidden" id="availabilityResult">
+                    <h4>Great news! 🎉</h4>
+                    <p>Dabur Nutri Mix is available in your area. Choose from the delivery options above.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>About Dabur Nutri Mix</h2>
+                <p>
+                    Introducing Dabur Nutri Mix - the newest addition to the trusted Dabur family. 
+                    Bringing together over 135 years of Ayurvedic expertise with premium quality dry fruits 
+                    to create the perfect nutrition solution for modern families.
+                </p>
+
+                <div class="about-features">
+                    <div class="feature-item">
+                        <span class="feature-icon">✓</span>
+                        <div class="feature-text">
+                            <h4>Heritage & Trust</h4>
+                            <p>Built on 135+ years of Ayurvedic expertise and India's trust in natural wellness solutions</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <span class="feature-icon">✓</span>
+                        <div class="feature-text">
+                            <h4>Premium Quality Sourcing</h4>
+                            <p>Carefully sourced almonds, cashews, walnuts, and dates from the finest regions</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <span class="feature-icon">✓</span>
+                        <div class="feature-text">
+                            <h4>Traditional Ayurvedic Processing</h4>
+                            <p>Advanced techniques combined with traditional methods to preserve maximum nutrition</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <span class="feature-icon">✓</span>
+                        <div class="feature-text">
+                            <h4>Rigorous Quality Standards</h4>
+                            <p>Every batch undergoes rigorous testing for purity, safety, and nutritional consistency</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonials">
+                    <h3>What Families Are Saying</h3>
+                    <div class="testimonial-grid">
+                        <div class="testimonial-card">
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <p>"Finally found a healthy nutrition option my kids actually love! The Ayurvedic formula gives me peace of mind."</p>
+                            <div class="testimonial-author">- Priya M., Mumbai</div>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <p>"Perfect for my morning protein shake. Great taste and I can trust the Dabur quality."</p>
+                            <div class="testimonial-author">- Rahul S., Delhi</div>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <p>"Love the convenience and natural ingredients. It's become part of our daily wellness routine."</p>
+                            <div class="testimonial-author">- Anjali K., Bangalore</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Dabur_logo.svg/512px-Dabur_logo.svg.png" alt="Dabur Logo" class="footer-logo">
+                    <div class="brand-text">
+                        <span class="brand-nutrimix">NUTRI MIX</span>
+                        <span class="brand-tagline">Ayurvedic Nutrition</span>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Products</h4>
+                        <ul>
+                            <li><a href="#products">Traditional Recipe Jar</a></li>
+                            <li><a href="#products">Premium Dry Fruits & Seeds</a></li>
+                            <li><a href="#products">Natural Wellness Blend</a></li>
+                            <li><a href="#recipes">Recipes & Tips</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Health & Nutrition</h4>
+                        <ul>
+                            <li><a href="#benefits">Health Benefits</a></li>
+                            <li><a href="#benefits">Ayurvedic Science</a></li>
+                            <li><a href="#products">Nutrition Calculator</a></li>
+                            <li><a href="#">Expert Advice</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Store Locator</a></li>
+                            <li><a href="#">Customer Care</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#about">About Dabur</a></li>
+                            <li><a href="#">Heritage & Trust</a></li>
+                            <li><a href="#">Quality Assurance</a></li>
+                            <li><a href="#">Sustainability</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2025 Dabur India Ltd. All rights reserved.</p>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Disclaimer</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook">📘</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="YouTube">📺</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Actions -->
+    <div class="floating-actions">
+        <button class="floating-btn" onclick="scrollToTop()" title="Back to Top">↑</button>
+        <button class="floating-btn chat-btn" onclick="openLiveChat()" title="Chat with Us">💬</button>
+    </div>
+
+    <!-- Nutrition Assistant -->
+    <div class="nutrition-assistant">
+        <button class="assistant-toggle" onclick="toggleAssistant()">
+            <span>🤖</span>
+            Ayurvedic Nutrition Expert
+        </button>
+        <div class="assistant-chat hidden">
+            <div class="chat-header">
+                <h3>Dabur Nutrition Expert</h3>
+                <button class="chat-close" onclick="toggleAssistant()">×</button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot">
+                    <p>Namaste! I'm your Dabur Nutri Mix nutrition expert. Ask me about our products, Ayurvedic benefits, recipes, or any health questions! 🌿</p>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="chatInput" placeholder="Ask about nutrition, recipes, benefits...">
+                <button onclick="sendChatMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
